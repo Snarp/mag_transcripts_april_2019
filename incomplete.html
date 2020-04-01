@@ -1,0 +1,20 @@
+---
+layout: page_default
+title: Incomplete Transcripts
+---
+
+<h2 class="page-title"><a href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></h2>
+
+<p>Openly-editable copies of these transcripts can be found <a href="https://drive.google.com/drive/folders/1EIFIx7OztYBW3DUcalbLz7vBGFQwJ48U?usp=sharing">in this Google Docs folder</a>. They can also be downloaded in Markdown format from their archive pages, linked below.</p>
+
+{% if site.data.incomplete.size > 0 %}
+<div class="table-of-contents">
+  <ul>
+    {% for episode in site.data.incomplete %}
+    <li>
+      <div class="ep-left"><a class="ep-title" href="episode/{{episode.number}}.html">{{episode.number}} {{episode.title}}</a></div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
